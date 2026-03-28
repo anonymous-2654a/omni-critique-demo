@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniGuard Interpretability Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+
+      <div class="warning-banner" id="warningBanner">
+        <span class="warn-icon">&#9888;</span>
+        <div class="warn-text">
+          <strong>Content Warning.</strong>
+          This page contains safety evaluation examples that may include
+          disturbing content such as violence, hate speech, and other
+          sensitive material. It is intended solely for academic review
+          purposes. Please proceed with caution.
+        </div>
+        <button class="warn-close" id="warningClose" aria-label="Dismiss">&times;</button>
+      </div>
+
+      <header class="hero">
+        <h1>OmniGuard Reasoning Critiques</h1>
+        <p>
+          Interactive demo for reviewer-facing interpretability evidence.
+          Cases are sampled across text, image, audio, and video modalities
+          with safe/unsafe coverage.
+        </p>
+      </header>
+
+      <nav class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-tab="text">
+          Text <span class="tab-badge" id="badgeText">0</span>
+        </button>
+        <button class="tab-btn" data-tab="image">
+          Image <span class="tab-badge" id="badgeImage">0</span>
+        </button>
+        <button class="tab-btn" data-tab="video">
+          Video <span class="tab-badge" id="badgeVideo">0</span>
+        </button>
+        <button class="tab-btn" data-tab="audio">
+          Audio <span class="tab-badge" id="badgeAudio">0</span>
+        </button>
+        <span class="tab-sep"></span>
+        <button class="tab-btn" data-tab="failure">
+          Failure <span class="tab-badge" id="badgeFailure">0</span>
+        </button>
+      </nav>
+
+      <div class="sub-filters" id="subFilters">
+        <span class="filter-label">Label:</span>
+        <button class="filter-pill" data-filter="label" data-value="safe">Safe</button>
+        <button class="filter-pill" data-filter="label" data-value="unsafe">Unsafe</button>
+      </div>
+
+      <section>
+        <div id="caseList" class="case-list"></div>
+      </section>
+
+    </main>
+
+    <template id="caseTemplate">
+      <article class="card">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="pill pill-modality js-modality"></span>
+            <span class="pill pill-source js-source"></span>
+            <span class="pill js-pred"></span>
+            <span class="pill js-gt"></span>
+            <span class="pill pill-failure js-failure"></span>
+          </div>
+        </div>
+
+        <!-- Conversation: input context -->
+        <div class="conversation js-conversation"></div>
+
+        <!-- Media preview -->
+        <div class="card-media js-media"></div>
+
+        <!-- OmniGuard verdict -->
+        <div class="omniguard-block">
+          <div class="omniguard-title">
+            <svg class="omniguard-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span class="omniguard-title-text">OmniGuard Assessment</span>
+          </div>
+          <div class="og-kv-table">
+            <div class="og-kv-row">
+              <span class="og-kv-key">Safety Label</span>
+              <span class="og-kv-val js-verdict-pill"></span>
+            </div>
+            <div class="og-kv-row js-og-cats">
+              <span class="og-kv-key">Categories</span>
+              <div class="og-kv-val og-cats-list js-omniguard-cats"></div>
+            </div>
+          </div>
+          <div class="og-reasoning-section">
+            <span class="og-reasoning-label">Reasoning</span>
+            <div class="og-reasoning-text js-omniguard-reasoning"></div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./data.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

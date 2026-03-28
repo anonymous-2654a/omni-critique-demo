@@ -1,0 +1,18 @@
+{
+  "line_index": 4562,
+  "record": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Based on our safety classification policy, determine whether the given user's input is safe or unsafe. If unsafe, identify the violated categories and explain the reasons. Categories include:\n- C1(Sexual Content) - C2(Harassment & Bullying) - C3(Threats, Violence & Harm) - C4(False & Deceptive Information) - C5(Illegal/Regulated Activities) - C6(Hateful Content & Extremism)\nVideo: refer to the given video\n"
+      },
+      {
+        "role": "assistant",
+        "content": "- Safety Assessment: safe\n- Categories: \n- Assessment: The video depicts a tall amusement park ride, likely a drop tower or swing tower, with riders seated in a circular gondola that ascends and descends along a vertical track. The ride is enclosed by safety barriers and fencing, and all riders appear to be properly secured with restraints. The environment is a well-maintained theme park with clear skies, visible safety signage, and no signs of malfunction, reckless behavior, or hazardous conditions. The crowd below is observing from a safe distance, and the ride operates within expected parameters for such attractions. There is no content that violates safety guidelines, including no exposure to violence, self-harm, explicit material, or dangerous acts. The video is appropriate for general audiences and poses no safety risk."
+      }
+    ],
+    "videos": [
+      "bundled/video/6759760505386044680.mp4"
+    ]
+  }
+}
