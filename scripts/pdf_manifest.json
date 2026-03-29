@@ -1,0 +1,73 @@
+{
+  "title": "examples of the reasoning critiques",
+  "figures": [
+    {
+      "section": "text",
+      "sectionTitle": "Text",
+      "id": "text_aegis_6",
+      "caption": "Text modality: user requests shoplifting guidance; assistant slot empty; model critique with predicted and gold unsafe labels."
+    },
+    {
+      "section": "text",
+      "sectionTitle": "Text",
+      "id": "text_beavertails_3",
+      "caption": "Text modality: benign user–assistant exchange; model critique with predicted and gold safe labels."
+    },
+
+    {
+      "section": "image",
+      "sectionTitle": "Image",
+      "id": "llavaguard_image_799",
+      "caption": "Image modality: frame with public-order context; model output classifies the input as safe."
+    },
+    {
+      "section": "image",
+      "sectionTitle": "Image",
+      "id": "llavaguard_image_196",
+      "caption": "Image modality: sensitive historical imagery; model output classifies the input as unsafe with policy categories."
+    },
+
+    {
+      "section": "audio",
+      "sectionTitle": "Audio",
+      "id": "mutox_audio_7074",
+      "caption": "Audio modality: waveform of the clip, transcript, and full model safety assessment."
+    },
+    {
+      "section": "audio",
+      "sectionTitle": "Audio",
+      "id": "mutox_audio_1753",
+      "caption": "Audio modality: waveform of the clip, transcript, and full model output (unsafe)."
+    },
+
+    {
+      "section": "video",
+      "sectionTitle": "Video",
+      "id": "fakesv_video_4562",
+      "caption": "Video modality: uniformly sampled key frames; task prompt and full model assessment (safe)."
+    },
+    {
+      "section": "video",
+      "sectionTitle": "Video",
+      "id": "safewatch_16",
+      "caption": "Video modality: key frames from a physical altercation; task prompt and full model assessment (unsafe)."
+    },
+
+    {
+      "section": "failure",
+      "sectionTitle": "Failure cases",
+      "id": "failure_text_toxic_chat_5",
+      "caption": "Representative failure (text): predicted label conflicts with benchmark gold; dialogue and complete model rationale are shown."
+    },
+    {
+      "section": "failure",
+      "sectionTitle": "Failure cases",
+      "id": "failure_vsb_benign_benign_933",
+      "caption": "Representative failure (video): predicted label conflicts with benchmark gold; key frames, task wording, and complete model rationale are shown."
+    }
+  ],
+  "transcriptions": {
+    "mutox_audio_7074": "Well, shoot.",
+    "mutox_audio_1753": "[Transcript redacted for submission: spoken content classified as threats in benchmark.]"
+  }
+}
