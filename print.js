@@ -310,8 +310,6 @@ function init() {
     return;
   }
 
-  document.getElementById("docTitle").textContent = bundle.title || "examples of the reasoning critiques";
-
   const frag = document.createDocumentFragment();
   bundle.figures.forEach((item, i) => {
     frag.appendChild(renderFigure(item, i));
