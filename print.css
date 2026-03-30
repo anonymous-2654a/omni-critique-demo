@@ -52,23 +52,6 @@ h3 {
   padding: 28px 24px 56px;
 }
 
-.doc-title {
-  font-size: 1.35rem;
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
-}
-
-.doc-note {
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-bottom: 28px;
-  padding: 14px 16px;
-  background: var(--warn-bg);
-  border: 1px solid var(--warn-border);
-  border-radius: var(--radius);
-  color: var(--warn-text);
-}
-
 .figure-list {
   display: flex;
   flex-direction: column;
@@ -387,10 +370,6 @@ figcaption.pdf-fig-caption .fig-prefix {
   .print-wrap {
     max-width: none;
     padding: 12px;
-  }
-
-  .doc-note {
-    break-inside: avoid;
   }
 
   figure.pdf-figure {
